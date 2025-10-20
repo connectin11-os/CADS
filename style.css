@@ -323,6 +323,32 @@ footer strong {
     transition: 0.3s;
 }
 
+/* Logo des services */
+.services-logo {
+  display: block;
+  margin: 0 auto 20px auto; /* centre le logo horizontalement */
+  max-width: 180px; /* taille max sur grand écran */
+  width: 50%; /* taille relative pour l’adaptation */
+  height: auto; /* garde les proportions */
+}
+
+/* Sur écrans moyens */
+@media (max-width: 768px) {
+  .services-logo {
+    max-width: 140px;
+    width: 60%;
+  }
+}
+
+/* Sur petits écrans (téléphones) */
+@media (max-width: 480px) {
+  .services-logo {
+    max-width: 120px;
+    width: 70%;
+  }
+}
+
+
 #sound-btn:hover {
     background: rgba(93, 156, 163, 0.9);
 }
