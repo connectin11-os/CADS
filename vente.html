@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente et Location - GIE Club Automobile Darou Salam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Lemon&family=Charis+SIL&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <h1>GIE CLUB AUTOMOBILE CLUB DAROU SALAM</h1>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="nosvoitures.html">Nos Marques</a>
+            <a href="vente.html" class="active">Vente et Location</a>
+            <a href="https://wa.me/221773520455" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+
+    <!-- SECTION VENTE ET LOCATION -->
+    <section class="services">
+        <div style="text-align: center;">
+            <img src="image/logo.png" alt="Logo Service" class="services-logo">
+            <h2 class="section-title">Vente et Location</h2>
+        </div>
+
+<!-- SECTION VIDEOS -->
+<section class="videos-section">
+    <div class="videos-container">
+        <div class="video-box">
+            <div class="video-wrapper">
+                <video id="video1" muted autoplay loop playsinline>
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+                <button id="sound-btn">🔊 Activer le son</button>
+            </div>
+        </div>
+
+        <div class="video-box">
+            <video autoplay muted loop playsinline>
+                <source src="video/video2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Bloc central -->
+        <div style="
+            background-color: #ffffff;
+            border: 2px solid #5d9ca3;
+            border-radius: 12px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Actor', sans-serif;
+            color: #000;">
+            
+            <p style="margin-bottom: 30px; line-height: 1.5;">
+                Vous voulez <strong>acheter</strong> ou <strong>louer</strong> une voiture chez <strong>CADS</strong> ?<br><br>
+                Contactez nos agents dès aujourd’hui pour trouver le véhicule qui vous correspond !
+            </p>
+
+            <a href="https://wa.me/221773520455" 
+               style="display: inline-block; background: #5d9ca3; color: #000; font-weight: bold; 
+                padding: 10px 25px; border-radius: 8px; text-decoration: none; 
+                font-family: 'Lemon', serif; transition: 0.3s;">
+                Contact
+            </a>
+        </div>
+    </section>
+
+    <!-- EMPLACEMENT -->
+    <section class="emplacement" id="contact">
+        <h2>Notre emplacement</h2>
+        <div class="map-container">
+            <a href="https://maps.app.goo.gl/RWwrDYBfEpwNc5ct5" target="_blank">
+                <img src="image/image9.jfif" alt="Carte" class="map">
+                <span class="map-text">Cliquez ici!</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-left">
+            <img src="image/logo.png" alt="Logo footer">
+            <p><strong>GIE CLUB AUTOMOBILE / CADS<br>CLUB DAROU SALAM</strong><br>
+            Route de l’Aéroport Nord Foire - Dakar</p>
+        </div>
+        <div class="footer-center">
+            <h4>Nos services</h4>
+            <p>Vente de voiture<br>Location de voiture<br>Lavage</p>
+        </div>
+        <div class="footer-right">
+            <h4>Contactez-nous</h4>
+            <p>+221 77 352 04 55<br>+221 77 671 27 69</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video1 = document.getElementById('video1');
+    const soundBtn = document.getElementById('sound-btn');
+
+    soundBtn.addEventListener('click', () => {
+        video1.muted = false;
+        video1.play().then(() => {
+            soundBtn.style.display = 'none'; // on cache le bouton une fois le son activé
+        }).catch(err => {
+            console.log("Erreur de lecture :", err);
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

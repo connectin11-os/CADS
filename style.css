@@ -1,0 +1,329 @@
+/* --- Styles généraux --- */
+body {
+    margin: 0;
+    font-family: 'Actor', sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+/* --- HEADER --- (inchangé sauf police du nom) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5d9ca3;
+    padding: 10px 5%;
+    flex-wrap: wrap;
+    font-family: 'Charis SIL', serif;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 60px;
+}
+
+header h1 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'Lemon', serif; /* ✅ nom GIE en Lemon */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.contact-btn {
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* --- IMAGE EN GRAND (ORDINATEUR) --- */
+.img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* --- VERSION MOBILE (RESPONSIVE ANDROID) --- */
+@media screen and (max-width: 768px) {
+    .img {
+        height: 200px; /* image plus petite sur mobile */
+    }
+
+    .img img {
+        height: 200px;
+    }
+}
+
+/* --- Très petit écran (ex : téléphone de 360px) --- */
+@media screen and (max-width: 480px) {
+    .img {
+        height: 150px;
+    }
+
+    .img img {
+        height: 150px;
+    }
+}
+
+
+
+/* --- INTRO --- */
+.intro {
+    background: #0f1f23;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Lemon', serif;
+}
+
+/* --- SERVICES --- */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services-logo {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.section-title {
+    background: #5d9ca3;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #000000;
+    font-family: 'Lemon', serif;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-family: 'Lemon', serif;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    margin: 15px 0;
+}
+
+/* --- EMPLACEMENT --- */
+.emplacement {
+    background: #5d9ca3;
+    color: #000;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Lemon', serif;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.map {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.map-text {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #0f1f23;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-family: 'Charis SIL', serif;
+}
+
+footer img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+footer h4 {
+    font-family: 'Lemon', serif;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer strong {
+    font-family: 'Lemon', serif; /* ✅ nom GIE en Lemon dans le footer */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .slides img {
+        height: 250px;
+    }
+
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .map {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* --- Effets sur les cartes --- */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* --- SLIDER IMAGES --- */
+.img {
+    position: relative;
+    width: 100%;
+    max-height: 600px; /* tu peux ajuster la hauteur selon ton design */
+    overflow: hidden;
+}
+
+.img .slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img .slides img {
+    width: 100%;
+    height: 600px; /* même hauteur pour toutes */
+    object-fit: cover; /* adapte l’image sans déformation */
+    object-position: center; /* centre chaque image */
+    display: none;
+}
+
+.img .slides img.active {
+    display: block;
+}
+
+.videos-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.videos-section h2 {
+    font-family: 'Lemon', serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.video-box {
+    background-color: #fff;
+    border: 2px solid #5d9ca3;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 350px; /* largeur max pour format TikTok */
+    width: 100%;
+    aspect-ratio: 9 / 16; /* hauteur adaptée au format vertical */
+    overflow: hidden;
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* garde le format vertical sans bande noire */
+    border-radius: 16px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#sound-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#sound-btn:hover {
+    background: rgba(93, 156, 163, 0.9);
+}
+
