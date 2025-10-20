@@ -323,3 +323,33 @@ footer strong {
     transition: 0.3s;
 }
 
+/* SECTION LOGO (après intro) */
+.logo {
+  text-align: center;         /* centre le logo horizontalement */
+  padding: 40px 0;            /* espace autour du logo */
+  background-color: transparent; /* fond neutre si besoin */
+}
+
+.main-logo {
+  display: inline-block;
+  max-width: 250px;           /* taille max sur grand écran */
+  width: 50%;                 /* s’adapte à la largeur de l’écran */
+  height: auto;               /* garde les proportions */
+  object-fit: contain;        /* évite tout débordement */
+}
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .main-logo {
+    max-width: 180px;
+    width: 60%;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .main-logo {
+    max-width: 130px;
+    width: 70%;
+  }
+}
