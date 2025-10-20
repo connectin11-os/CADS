@@ -323,33 +323,63 @@ footer strong {
     transition: 0.3s;
 }
 
-/* Logo des services */
+/* SECTION SERVICES */
+.services {
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Logo centré et parfaitement responsive */
 .services-logo {
   display: block;
-  margin: 0 auto 20px auto; /* centre le logo horizontalement */
-  max-width: 180px; /* taille max sur grand écran */
-  width: 50%; /* taille relative pour l’adaptation */
-  height: auto; /* garde les proportions */
+  margin: 0 auto 20px auto;
+  max-width: 150px;       /* limite de taille sur grands écrans */
+  width: 100%;            /* prend la largeur du conteneur */
+  height: auto;           /* conserve les proportions */
+  object-fit: contain;    /* évite les débordements */
 }
 
-/* Sur écrans moyens */
-@media (max-width: 768px) {
+/* Texte et titre */
+.section-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Cartes */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Chaque carte */
+.card {
+  background: white;
+  border-radius: 12px;
+  width: 300px;
+  max-width: 90vw;        /* évite de dépasser sur mobile */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📱 Petits écrans : logo plus petit et cartes en une seule colonne */
+@media (max-width: 600px) {
   .services-logo {
-    max-width: 140px;
-    width: 60%;
+    max-width: 100px;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
-
-/* Sur petits écrans (téléphones) */
-@media (max-width: 480px) {
-  .services-logo {
-    max-width: 120px;
-    width: 70%;
-  }
-}
-
-
-#sound-btn:hover {
-    background: rgba(93, 156, 163, 0.9);
-}
-
